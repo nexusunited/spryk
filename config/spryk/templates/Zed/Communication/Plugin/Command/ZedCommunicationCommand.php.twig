@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ */
+
+namespace {{ organization }}\Zed\{{ module }}\Communication\Plugin\Command;
+
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+use Spryker\Zed\StateMachine\Dependency\Plugin\CommandPluginInterface;
+
+/**
+ * @method \{{ organization }}\Zed\{{ module }}\Communication\{{ module }}CommunicationFactory getFactory()
+ * @method \{{ organization }}\Zed\{{ module }}\Business\{{ module }}FacadeInterface getFacade()
+ */
+class {{ module }}CommandPlugin  extends AbstractPlugin implements CommandPluginInterface
+{
+}
