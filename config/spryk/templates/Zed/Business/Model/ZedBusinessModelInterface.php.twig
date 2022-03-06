@@ -1,7 +1,5 @@
 <?php
 
-{{ include('Partials/license.twig') }}
-
 namespace {{ organization }}\Zed\{{ module }}\Business{% if subDirectory.value %}\{{ subDirectory | replace({'/': '\\'}) }}{% endif %};
 
 interface {{ interfaceName | classNameShort }}
