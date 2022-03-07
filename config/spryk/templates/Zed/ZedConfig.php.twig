@@ -2,8 +2,8 @@
 
 namespace {{ organization }}\Zed\{{ module }};
 
-use {{ extends | trim('\\') }};
+use Spryker\Zed\Kernel\AbstractBundleConfig;
 
-class {{ module }}Config extends {{ extends | classNameShort }}
+class {{ module }}Config extends AbstractBundleConfig
 {
 }
