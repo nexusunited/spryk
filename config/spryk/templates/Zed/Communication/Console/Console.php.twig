@@ -11,7 +11,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class {{ className }}Console extends Console
 {
-    protected const COMMAND_NAME = '{{ consoleCommand }}';
+    protected const COMMAND_NAME = '{{ className | lower }}:action';
 
     /**
      * @return void

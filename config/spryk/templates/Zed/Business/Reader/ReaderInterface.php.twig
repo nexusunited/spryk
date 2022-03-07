@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ organization }}\Zed\{{ module }}\Business\Reader;
+
+class {{ className | classNameShort }}Reader  implements {{ className | classNameShort }}ReaderInterface
+{
+    /**
+    * @param \Generated\Shared\Transfer\{{ module }}CriteriaTransfer ${{ module | methodName }}CriteriaTransfer
+    *
+    * @return \Generated\Shared\Transfer\{{ module }}CollectionTransfer
+    */
+    public function find{{ module }}({{ module }}CriteriaTransfer ${{ module | methodName }}CriteriaTransfer): {{ module }}CollectionTransfer
+    {
+        $this->{{ module | methodName }}Repository = ${{ module | methodName }}Repository;
+    }
+}
