@@ -9,7 +9,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 /**
  * @method \{{ organization }}\Zed\{{ module }}\Business\{{ module }}FacadeInterface getFacade()
  */
-class {{ className | ensureConsoleSuffix }} extends Console
+class {{ className }}Console extends Console
 {
     protected const COMMAND_NAME = '{{ consoleCommand }}';
 
