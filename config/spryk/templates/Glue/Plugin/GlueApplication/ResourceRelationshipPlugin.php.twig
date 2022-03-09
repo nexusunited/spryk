@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace {{ organization }}\Glue\{{ module }}\Plugin\GlueApplication;
 
 use Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface;
@@ -9,11 +11,11 @@ use Spryker\Glue\Kernel\AbstractPlugin;
 /**
  * @method \Spryker\Glue\{{ module }}\{{ module }}Factory getFactory()
  */
-class {{ pluginClassName }}ResourceRelationshipPlugin extends AbstractPlugin implements ResourceRelationshipPluginInterface
+class {{ module }}ResourceRelationshipPlugin extends AbstractPlugin implements ResourceRelationshipPluginInterface
 {
     /**
      * {@inheritdoc}
-     * - Adds {{ resourceType | dasherize }} resource as relationship by {{ relationshipParameter | camelCased | lcfirst }}.
+     * - Adds {{ module | dasherize }} resource as relationship by {{ relationshipParameter | camelCased | lcfirst }}.
      *
      * @api
      *
@@ -38,6 +40,6 @@ class {{ pluginClassName }}ResourceRelationshipPlugin extends AbstractPlugin imp
      */
     public function getRelationshipResourceType(): string
     {
-        return \{{ organization }}\Glue\{{ module }}\{{ module }}Config::RESOURCE_{{ resourceType | dashToUnderscore | upper }};
+        return \{{ organization }}\Glue\{{ module }}\{{ module }}Config::RESOURCE_{{ module | dashToUnderscore | upper }};
     }
 }

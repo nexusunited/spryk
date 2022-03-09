@@ -1,11 +1,17 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace {{ organization }}\Zed\{{ module }}\Business\Reader;
+
+use Generated\Shared\Transfer\{{ module }}CollectionTransfer;
+use Generated\Shared\Transfer\{{ module }}CriteriaTransfer;
+use {{ organization }}\Zed\{{ module }}\Persistence\RepositoryInterface;
 
 class {{ className | classNameShort }}Reader implements {{ className | classNameShort }}ReaderInterface
 {
     /**
-     * @param {{ organization }}\Zed\{{ module }}\Persistence\{{ module }}RepositoryInterface ${{ module | methodName }}Repository
+     * @param \{{ organization }}\Zed\{{ module }}\Persistence\{{ module }}RepositoryInterface ${{ module | methodName }}Repository
      */
     public function __construct({{ module }}RepositoryInterface ${{ module | methodName }}Repository)
     {

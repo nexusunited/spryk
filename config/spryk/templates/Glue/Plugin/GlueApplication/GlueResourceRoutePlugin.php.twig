@@ -1,17 +1,19 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace {{ organization }}\Glue\{{ module }}\Plugin\GlueApplication;
 
-use Generated\Shared\Transfer\Rest{{ resourceType | dashToCamelCase }}AttributesTransfer;
+use Generated\Shared\Transfer\Rest{{ module | dashToCamelCase }}AttributesTransfer;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRouteCollectionInterface;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface;
 use Spryker\Glue\Kernel\AbstractPlugin;
 
-class {{ resourceType | dashToCamelCase }}ResourceRoutePlugin extends AbstractPlugin implements ResourceRoutePluginInterface
+class {{ module | dashToCamelCase }}ResourceRoutePlugin extends AbstractPlugin implements ResourceRoutePluginInterface
 {
     /**
      * {@inheritdoc}
-     * - Configures available actions for {{ resourceType | dasherize }} resource.
+     * - Configures available actions for {{ module | dasherize }} resource.
      *
      * @api
      *
@@ -33,7 +35,7 @@ class {{ resourceType | dashToCamelCase }}ResourceRoutePlugin extends AbstractPl
      */
     public function getResourceType(): string
     {
-        return \{{ organization }}\Glue\{{ module }}\{{ module }}Config::RESOURCE_{{ resourceType | dashToUnderscore | upper }};
+        return \{{ organization }}\Glue\{{ module }}\{{ module }}Config::RESOURCE_{{ module | dashToUnderscore | upper }};
     }
 
     /**
@@ -45,7 +47,7 @@ class {{ resourceType | dashToCamelCase }}ResourceRoutePlugin extends AbstractPl
      */
     public function getController(): string
     {
-        return '{{ resourceType | dasherize }}-resource';
+        return '{{ module | dasherize }}-resource';
     }
 
     /**
@@ -57,6 +59,6 @@ class {{ resourceType | dashToCamelCase }}ResourceRoutePlugin extends AbstractPl
      */
     public function getResourceAttributesClassName(): string
     {
-        return Rest{{ resourceType | dashToCamelCase }}AttributesTransfer::class;
+        return Rest{{ module | dashToCamelCase }}AttributesTransfer::class;
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace {{ organization }}\Glue\{{ module }}\Plugin\GlueApplication;
 
 use Spryker\Glue\GlueApplication\Rest\Request\RequestBuilderInterface;
@@ -10,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * @method \Spryker\Glue\{{ module }}\{{ module }}Factory getFactory()
  */
-class {{ modelName }}FormatRequestPlugin extends AbstractPlugin implements FormatRequestPluginInterface
+class {{ module }}FormatRequestPlugin extends AbstractPlugin implements FormatRequestPluginInterface
 {
     /**
      * {@inheritdoc}

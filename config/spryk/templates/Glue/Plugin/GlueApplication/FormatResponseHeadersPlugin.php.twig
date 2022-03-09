@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace {{ organization }}\Glue\{{ module }}\Plugin\GlueApplication;
 
 use Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface;
@@ -11,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * @method \Spryker\Glue\{{ module }}\{{ module }}Factory getFactory()
  */
-class {{ modelName }}FormatResponseHeadersPlugin extends AbstractPlugin implements FormatResponseHeadersPluginInterface
+class {{ module }}FormatResponseHeadersPlugin extends AbstractPlugin implements FormatResponseHeadersPluginInterface
 {
     /**
      * {@inheritdoc}
