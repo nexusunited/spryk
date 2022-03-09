@@ -14,13 +14,13 @@ use Spryker\Zed\Kernel\Communication\Controller\AbstractController;
 class GatewayController extends AbstractGatewayController
 {
     /**
-     * @param \Generated\Shared\Transfer\{{ module }}Transfer ${{ module | methodName }}Transfer
+     * @param \Generated\Shared\Transfer\{{ module }}Transfer ${{ module | lcfirst }}Transfer
      *
-     * @return \Generated\Shared\Transfer\{{ module }}Transfer ${{ module | methodName }}Transfer
+     * @return \Generated\Shared\Transfer\{{ module }}Transfer ${{ module | lcfirst }}Transfer
      */
-    public function customAction({{ module }}Transfer ${{ module | methodName }}Transfer): {{ module | methodName }}Transfer
+    public function customAction({{ module }}Transfer ${{ module | lcfirst }}Transfer): {{ module | lcfirst }}Transfer
     {
         return $this->getFacade()
-                ->customAction(${{ module | methodName }}Transfer);
+                ->customAction(${{ module | lcfirst }}Transfer);
     }
 }

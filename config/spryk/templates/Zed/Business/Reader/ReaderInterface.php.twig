@@ -7,9 +7,9 @@ namespace {{ organization }}\Zed\{{ module }}\Business\Reader;
 interface {{ className | classNameShort }}Reader
 {
     /**
-    * @param \Generated\Shared\Transfer\{{ module }}CriteriaTransfer ${{ module | methodName }}CriteriaTransfer
+    * @param \Generated\Shared\Transfer\{{ module }}CriteriaTransfer ${{ module | lcfirst }}CriteriaTransfer
     *
     * @return \Generated\Shared\Transfer\{{ module }}CollectionTransfer
     */
-    public function find{{ module }}({{ module }}CriteriaTransfer ${{ module | methodName }}CriteriaTransfer): {{ module }}CollectionTransfer;
+    public function find{{ module }}({{ module }}CriteriaTransfer ${{ module | lcfirst }}CriteriaTransfer): {{ module }}CollectionTransfer;
 }
